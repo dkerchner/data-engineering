@@ -1,0 +1,20 @@
+<!-- Bootstrap trigger to open modal -->
+<a data-toggle="modal" href="#rating-modal" >Import Legacy Purchase Data</a>
+ 
+<div class="hide fade modal" id="rating-modal">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">x</button>
+    <h2>Import Legacy Purchase Data</h2>
+  </div>
+ 
+  <div class="modal-body">
+    <%= form_tag "/legacy/import_file", multipart: true, class: "form-horizontal well" do %>
+      <%= file_field_tag :file %>
+      <%= submit_tag "Import" %>
+    <% end %>
+  </div>
+ 
+  <div class="modal-footer">
+    <a href="#" class="btn" data-dismiss="modal">Cancel</a>
+  </div>
+</div>
