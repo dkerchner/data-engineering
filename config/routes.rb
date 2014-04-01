@@ -1,4 +1,5 @@
 DataEngineering::Application.routes.draw do
+  root "purchases#index"
   get "legacy/import_file"
   post "legacy/import_file"
   
